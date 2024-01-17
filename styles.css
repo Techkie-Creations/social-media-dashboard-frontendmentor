@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* GLOBALS */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: hsl(230, 17%, 14%);
+}
+
+/* BODY DARK MODE */
+body.dark {
+    background-color: hsl(230, 17%, 14%);
+    color: hsl(0, 0%, 100%);
+}
+
+/* MAIN */
+
+main.main {
+    padding: 3rem 7rem;
+    width: 100%;
+}
+
+/* MAIN - HEADING */
+
+.main .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+/* HEADING - LEFT */
+
+.heading .left h1, .main .heading .left p {
+    margin: 0;
+}
+
+/* HEADING RIGHT */
+
+.heading .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.heading .right .mode {
+    font-weight: 700;
+}
+
+.heading .right .mode.dark {
+    color: hsl(0, 0%, 100%);
+}
+
+/* RIGHT - TOGGLER */
+
+.heading .right .toggler {
+    width: 4rem;
+    height: 1.7rem;
+    border-radius: 2rem;
+    padding: 0 .2rem;
+    background-image: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+.heading .right .toggler .ball {
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    margin-top: .2rem;
+    background-color: white;
+    float: right;
+}
+
+.heading .right .toggler .ball.dark {
+    background-color: hsl(230, 17%, 14%);
+    float: left;
+}
+
+/* RIGHT - TOGGLER AND BALL HOVER DARK MODES */
+
+.heading .right .toggler:hover, .heading .right .toggler .ball:hover {
+    cursor: pointer;
+}
+
+/* MAIN - PLAFORMS */
+
+.main .platforms {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* PLATFORMS - SOCIAL */
+
+.platforms .social {
+    width: 18rem;
+    border-radius: 1rem;
+    background-color: hsl(225, 100%, 98%);
+    transition: width 1.5s ease-in;
+}
+
+.platforms .social.dark {
+    background-color: hsl(228, 28%, 20%);
+}
+
+.platforms .social:hover {
+    cursor: pointer;
+    background-color: hsl(227, 47%, 96%);    
+}
+
+.platforms .social.dark:hover {
+    background-color: hsl(232, 19%, 15%);
+}
+
+.platforms .social .color-bar {
+    width: 100%;
+    height: .5rem;
+    overflow: hidden;
+    border-radius: 9rem 9rem 0 0;
+}
+
+.platforms .social .color-bar.fb {
+    background-color: hsl(208, 92%, 53%);
+}
+
+.platforms .social .color-bar.tt {
+    background-color: hsl(203, 89%, 53%);
+}
+
+.platforms .social .color-bar.ig {
+    background-image: linear-gradient(hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+}
+
+.platforms .social .color-bar.yt {
+    background-color: hsl(348, 97%, 39%);
+}
+
+.platforms .social .padding {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.platforms .social .padding .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.platforms .social .padding p {
+    margin: .3rem;
+}
+
+.platforms .social .padding p.bold {
+    font-size: calc(100% * 4.5);
+}
+
+.platforms .social .padding p.desc {
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    margin-bottom: 2rem;
+}
+
+/* STATS INDICATIONS */
+
+.up {
+    color: hsl(163, 72%, 41%);
+}
+
+.down {
+    color: hsl(356, 69%, 56%);
+}
+
+/* MAIN - OVERVIEW GRID */
+
+.main .overview-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 22%);
+    gap: 3rem;
+}
+
+.overview-grid .overview {
+    padding: 1.5rem;
+    border-radius: .5rem;
+    background-color: hsl(225, 100%, 98%);
+}
+
+.overview-grid .overview.dark {
+    background-color: hsl(228, 28%, 20%);
+}
+
+.overview-grid .overview:hover {
+    cursor: pointer;
+    background-color: hsl(227, 47%, 96%);
+}
+
+.overview-grid .overview.dark:hover {
+    background-color: hsl(232, 19%, 15%);
+}
+
+.overview-grid .overview .profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.overview-grid .overview .over-stat {
+    display: flex;
+    justify-content: space-between;
+}
+
+.overview-grid .overview .over-stat .number {
+    font-size: calc(100% * 2);
+    margin: 0;
+}
+
+.overview-grid .overview .over-stat .percent {
+    align-self: flex-end;
+}
+
+/* GROUPINGS */
+
+.platforms .social .padding .logo,
+.platforms .social .padding p.bold,
+.platforms .social .padding .stat, 
+.overview-grid .overview .over-stat,
+.overview-grid .overview .profile .view {
+    font-weight: 700;
+}
+
+.platforms .social .padding .logo .user,
+.platforms .social .padding p.desc,
+.overview-grid .overview .profile .view {
+    color: hsl(228, 12%, 44%);
+}
+
+/* GROUPINGS - DARK MODE */
+
+.platforms .social .padding .logo .user.dark,
+.platforms .social .padding p.desc.dark,
+.overview-grid .overview .profile .view.dark {
+    color: hsl(228, 34%, 66%);
+}
+
+/* FOOTER */
+
+footer {
+	text-align: center;
+}
+
+footer .avatar {
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	object-position: 0rem 0.01rem;
+	object-fit: cover;
+}
+
+footer .attribution a {
+	text-decoration: none;
+	color: hsl(356, 69%, 56%);
+    font-weight: 700;
+}
+
+footer .attribution a:hover {
+	color: hsl(163, 72%, 41%);
+}
+
+footer p.copy {
+	font-weight: 700;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1136px) {
+    main.main {
+        padding: 3rem 5rem;
+    }
+
+    .platforms .social {
+        width: 25rem;
+    }
+
+    .main .overview-grid {
+        grid-template-columns: repeat(3, 30%);
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .platforms .social {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .main .overview-grid {
+        grid-template-columns: repeat(2, auto);
+    }
+}
+
+@media screen and (max-width: 705px) {
+    .main .heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3rem;
+    }
+
+    .heading .right {
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    main.main {
+        padding: 3rem 2rem;
+    }
+
+    .main .overview-grid {
+        grid-template-columns: none;
+    }
+}
